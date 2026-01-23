@@ -1,0 +1,6 @@
+- [ ]  Rename the entire resume to komorebi
+- [ ]  Change the entire theme
+- [ ]  Change the navbar and add
+- [ ]  New file tree
+- [ ]  New user flow
+- [ ]  Remove Sign in and Sign out

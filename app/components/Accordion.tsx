@@ -1,3 +1,4 @@
+//This Accprdian component appears while score checking on the frontend 
 import type { ReactNode } from "react";
 import React, { createContext, useContext, useState } from "react";
 import { cn } from "~/lib/utils";

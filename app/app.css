@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
+/* @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 
 @theme {
   --font-sans: "Mona Sans", ui-sans-serif, system-ui, sans-serif,
@@ -148,5 +148,170 @@ form {
   }
   to {
     opacity: 1;
+  }
+} */
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* -------------------------
+   ROOT VARIABLES
+-------------------------- */
+:root {
+  /* Primary */
+  --komorebi-forest: #2F4F2F;
+  --komorebi-moss: #3E5F3E;
+
+  /* Secondary */
+  --komorebi-olive: #6B8E23;
+  --komorebi-sage: #A3B18A;
+
+  /* Accent */
+  --komorebi-gold: #C9A24D;
+  --komorebi-gold-soft: #E6D8A3;
+
+  /* Neutrals */
+  --komorebi-white: #ffffff;
+  --komorebi-bg: #f7faf7;
+  --komorebi-text: #1f2d1f;
+
+  /* Typography */
+  --font-brand: 'Playfair Display', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+/* =========================================================
+   GRADIENT UTILITIES
+   ========================================================= */
+
+@utility bg-komorebi-gradient {
+  background: linear-gradient(
+    to right,
+    var(--komorebi-forest),
+    var(--komorebi-olive),
+    var(--komorebi-gold)
+  );
+}
+
+@utility bg-komorebi-soft {
+  background: linear-gradient(
+    to bottom,
+    #f7faf7 0%,
+    var(--komorebi-gold-soft) 120%
+  );
+}
+
+@utility bg-komorebi-card {
+  background: linear-gradient(
+    to bottom right,
+    var(--komorebi-white),
+    var(--komorebi-sage)
+  );
+}
+
+/* =========================================================
+   TYPOGRAPHY UTILITIES
+   ========================================================= */
+
+@utility text-brand {
+  font-family: var(--font-brand);
+  color: var(--komorebi-forest);
+  letter-spacing: 0.02em;
+}
+
+@utility text-body {
+  font-family: var(--font-body);
+  color: var(--komorebi-text);
+}
+
+@utility text-accent {
+  color: var(--komorebi-gold);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+@utility btn-komorebi {
+  background: linear-gradient(
+    to right,
+    var(--komorebi-forest),
+    var(--komorebi-olive)
+  );
+  color: var(--komorebi-white);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+@utility text-komorebi-gradient {
+  background: linear-gradient(
+    to right,
+    var(--komorebi-forest),
+    var(--komorebi-olive),
+    var(--komorebi-gold)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* @utility btn-komorebi:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(47, 79, 47, 0.25);
+} */
+
+@utility btn-komorebi-accent {
+  background: var(--komorebi-gold);
+  color: #1f2d1f;
+  font-weight: 600;
+}
+
+/* =========================================================
+   CARDS & CONTAINERS
+   ========================================================= */
+
+@utility komorebi-card {
+  background: var(--komorebi-white);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 8px 30px rgba(47, 79, 47, 0.08);
+}
+
+@utility komorebi-glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(47, 79, 47, 0.08);
+}
+
+/* =========================================================
+   DECORATIVE EFFECTS
+   ========================================================= */
+
+@utility komorebi-glow {
+  box-shadow:
+    0 0 0 0 rgba(201, 162, 77, 0.35),
+    0 20px 40px rgba(201, 162, 77, 0.25);
+}
+
+@utility komorebi-divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--komorebi-sage),
+    transparent
+  );
+}
+
+/* =========================================================
+   DARK MODE (OPTIONAL)
+   ========================================================= */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --komorebi-bg: #0f1a0f;
+    --komorebi-text: #e7efe7;
   }
 }

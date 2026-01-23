@@ -4,7 +4,7 @@ declare global {
   interface Window {
     puter: {
       auth: {
-        getUser: () => Promise<PuterUser>;
+        getUser: () => Promise<PuterUser>; //This getUser type is a Promise that resolves to a PuterUser
         isSignedIn: () => Promise<boolean>;
         signIn: () => Promise<void>;
         signOut: () => Promise<void>;
